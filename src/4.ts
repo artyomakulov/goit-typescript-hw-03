@@ -23,19 +23,16 @@ class Person {
 }
 
 abstract class House {
-    door: boolean;
-    key : Key;
-    tenants: Person[] = []
+    public door: boolean;
+    public key : Key;
+    public tenants: Person[] = []
 
   
 
     comeIn(person:Person): void {
         if (this.door === true) {
             this.tenants.push(person)
-        } else {
-            return
-        }
-
+        } 
     }
 
     abstract openDoor(key: Key): void;
